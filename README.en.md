@@ -1,32 +1,29 @@
-
 # Tagger for [Automatic1111's WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
-使用各种模型（例如 DeepDanbooru）询问单个或多个图像文件的 booru 样式标签。
+Interrogate booru style tags for single or multiple image files using various models, such as DeepDanbooru.
 
-中文版
+## Disclaimer
+I didn't make any models, and most of the code was heavily borrowed from the [DeepDanbooru](https://github.com/KichangKim/DeepDanbooru) and MrSmillingWolf's tagger.
 
-## 免责声明
-我没有制作任何模型，大部分代码大量借用自 DeepDanbooru 和 MrSmillingWolf 的标记器。
-
-## 安装
+## Installation
 1. *Extensions* -> *Install from URL* -> Enter URL of this repository -> Press *Install* button
-   - 或将此存储库克隆到 `extensions/`
+   - or clone this repository under `extensions/`
       ```sh
       $ git clone https://github.com/toriato/stable-diffusion-webui-wd14-tagger.git extensions/tagger
       ```
 
-1. *(optional)* 添加询问模型
+1. *(optional)* Add interrogate model
    - #### [*Waifu Diffusion 1.4 Tagger by MrSmilingWolf*](docs/what-is-wd14-tagger.md)
-      第一次运行时会自动从 [HuggingFace repository](https://huggingface.co/SmilingWolf/wd-v1-4-vit-tagger) 存储库下载。
+      Downloads automatically from the [HuggingFace repository](https://huggingface.co/SmilingWolf/wd-v1-4-vit-tagger) the first time you run it.
 
    - #### *DeepDanbooru*
-      1. 下面可以找到各种模型文件。
+      1. Various model files can be found below.
          - [DeepDanbooru models](https://github.com/KichangKim/DeepDanbooru/releases)
          - [e621 model by 🐾Zack🐾#1984](https://discord.gg/BDFpq9Yb7K)
             *(link contains NSFW contents!)*
 
-      1. 将包含模型和配置的项目文件夹移动到 `models/deepdanbooru`
+      1. Move the project folder containing the model and config to `models/deepdanbooru`
 
-      1. 文件结构应该类似于:
+      1. The file structure should look like:
          ```
          models/
          └╴deepdanbooru/
@@ -45,19 +42,19 @@
            ...
          ```
 
-1. 启动或重新启动 WebUI。
-   - 或者您可以在询问器下拉框后按刷新按钮。
-   - "安装后必须完全关闭稳定扩散并重新运行！"
+1. Start or restart the WebUI.
+   - or you can press refresh button after *Interrogator* dropdown box.
+   - "You must close stable diffusion completely after installation and re-run it!"
 
 
-## 型号对比
+## Model comparison
 [Model comparison](docs/model-comparison.md)
 
-## 截屏
+## Screenshot
 ![Screenshot](docs/screenshot.png)
 
-由 [hecattaart](https://vk.com/hecattaart?w=wall-89063929_3767) 制作的艺术品
+Artwork made by [hecattaart](https://vk.com/hecattaart?w=wall-89063929_3767)
 
-## 版权
+## Copyright
 
-公共领域，借用部分除外（例如 dbimutils.py）
+Public domain, except borrowed parts (e.g. `dbimutils.py`)
